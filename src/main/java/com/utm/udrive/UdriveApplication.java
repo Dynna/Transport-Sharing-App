@@ -1,43 +1,44 @@
 package com.utm.udrive;
 
-import com.utm.udrive.dao.DaoImplementation;
-import com.utm.udrive.dao.DaoInterface;
-import com.utm.udrive.service.UserClass;
-import org.hibernate.Hibernate;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.hibernate.cfg.Configuration;
+import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
+@EnableJpaRepositories
 @SpringBootApplication
-public class UdriveApplication {
+public class UdriveApplication implements CommandLineRunner {
 
-	public static void main(String[] args) {
-		DaoImplementation dao = new DaoImplementation();
+    public static void main(String[] args) {
+        SpringApplication.run(UdriveApplication.class, args);
+    }
 
-		UserClass dina = new UserClass();
-		dina.setName("Dina");
-		dina.setSurnname("Bizgu");
-		dina.setEmail("dina@mail.com");
-		dina.setAddress("starii dub");
+    @Override
+    public void run(String... args) throws Exception {
+    }
 
-		UserClass dan = new UserClass();
-		dan.setName("Dan");
-		dan.setSurnname("Luncasu");
-		dan.setEmail("dan@mail.com");
-		dan.setAddress("starii dub");
+//	public static void main(String[] args) {
+//		DaoImplementation dao = new DaoImplementation();
+//
+//		UserClass dina = new UserClass();
+//		dina.setName("Dina");
+//		dina.setSurnname("Bizgu");
+//		dina.setEmail("dina@mail.com");
+//		dina.setAddress("starii dub");
+//
+//		UserClass dan = new UserClass();
+//		dan.setName("Dan");
+//		dan.setSurnname("Luncasu");
+//		dan.setEmail("dan@mail.com");
+//		dan.setAddress("starii dub");
+//
+//		dao.usersToDataBase(dina, dan);
 
-		dao.usersToDataBase(dina, dan);
 
-
-		//SpringApplication.run(UdriveApplication.class, args);
-	}
+//		SpringApplication.run(UdriveApplication.class, args);
+//	}
 
 
 }
