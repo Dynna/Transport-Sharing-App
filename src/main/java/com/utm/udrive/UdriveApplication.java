@@ -18,27 +18,4 @@ public class UdriveApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
     }
-
-//	public static void main(String[] args) {
-//		DaoImplementation dao = new DaoImplementation();
-//
-//		UserClass dina = new UserClass();
-//		dina.setName("Dina");
-//		dina.setSurnname("Bizgu");
-//		dina.setEmail("dina@mail.com");
-//		dina.setAddress("starii dub");
-//
-//		UserClass dan = new UserClass();
-//		dan.setName("Dan");
-//		dan.setSurnname("Luncasu");
-//		dan.setEmail("dan@mail.com");
-//		dan.setAddress("starii dub");
-//
-//		dao.usersToDataBase(dina, dan);
-
-
-//		SpringApplication.run(UdriveApplication.class, args);
-//	}
-
-
 }
