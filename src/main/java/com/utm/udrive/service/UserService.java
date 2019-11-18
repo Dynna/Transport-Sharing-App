@@ -13,7 +13,6 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class UserService {
-
     @Autowired
     UserRepository repository;
 
@@ -30,12 +29,7 @@ public class UserService {
     }
 
     public User getUser(String email) {
-        List<User> users = repository.findByEmail(email);
-        if (users.size() != 1) {
-            return null;
-        } else {
-            return users.get(0);
-        }
+        return repository.findByEmail(email).get();
     }
 
     public void deleteUser(String email) {

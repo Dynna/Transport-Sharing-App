@@ -1,13 +1,10 @@
 package com.utm.udrive.controllers.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Value;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Value
 public class UserDto {
